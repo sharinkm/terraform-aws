@@ -1,0 +1,6 @@
+
+.terraform*
+entry-script.sh
+output.tf
+terraform.tf*
+terraform.tfvars
