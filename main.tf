@@ -121,7 +121,7 @@ resource "aws_instance" "my-jump-server" {
 
 resource "aws_instance" "master-node" {
   ami = data.aws_ami.ubuntu-latest-image.id
-  instance_type = var.instance_type
+  instance_type = "t3.small"
   subnet_id = aws_subnet.my-app-subnet.id
   #vpc_security_group_ids = [aws_default_security_group.default-sg.id]
   availability_zone = var.availability_zone
@@ -140,7 +140,7 @@ resource "aws_instance" "master-node" {
 
 resource "aws_instance" "worker-node" {
   ami = data.aws_ami.ubuntu-latest-image.id
-  instance_type = var.instance_type
+  instance_type = "t3.small"
   subnet_id = aws_subnet.my-app-subnet.id
   #vpc_security_group_ids = [aws_default_security_group.default-sg.id]
   availability_zone = var.availability_zone
